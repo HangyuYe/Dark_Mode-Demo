@@ -14,6 +14,22 @@ class ViewController: UIViewController {
     
     var mode = "normal"
     
+    let backGroundColor = UIColor { (trainCollection) -> UIColor in
+        if trainCollection.userInterfaceStyle == .dark {
+            return UIColor.black
+        } else {
+            return UIColor.white
+        }
+    }
+    
+    let labelColor = UIColor { (trainCollection) -> UIColor in
+        if trainCollection.userInterfaceStyle == .dark {
+            return .black
+        } else {
+            return .white
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
