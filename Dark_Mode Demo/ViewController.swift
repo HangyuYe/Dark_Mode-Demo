@@ -11,27 +11,15 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var someView: UIView!
+    @IBOutlet weak var someText: UILabel!
     
     var mode = "normal"
     
-    let backGroundColor = UIColor { (trainCollection) -> UIColor in
-        if trainCollection.userInterfaceStyle == .dark {
-            return UIColor.black
-        } else {
-            return UIColor.white
-        }
-    }
-    
-    let labelColor = UIColor { (trainCollection) -> UIColor in
-        if trainCollection.userInterfaceStyle == .dark {
-            return .black
-        } else {
-            return .white
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = backGroundColor
+        someText.textColor = textLableColor
+        someView.backgroundColor = mainView
     }
     
     //Use monitor current appearance
@@ -39,9 +27,11 @@ class ViewController: UIViewController {
         super.traitCollectionDidChange(previousTraitCollection)
         if traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection) {
             if traitCollection.userInterfaceStyle == .dark {
-                someView.backgroundColor = #colorLiteral(red: 0.3176470697, green: 0.07450980693, blue: 0.02745098062, alpha: 1)
+                mode = "dark"
+                print("Current mode is: \(mode)")
             } else {
-                someView.backgroundColor = .systemOrange
+                mode = "light"
+                print("Current mode is: \(mode)")
             }
         }
     }

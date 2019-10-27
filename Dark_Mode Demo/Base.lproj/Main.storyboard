@@ -22,16 +22,25 @@
                                     <constraint firstAttribute="height" constant="400" id="PSc-0U-VxD"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a tittle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uoj-5Y-E2b">
+                                <rect key="frame" x="123" y="204" width="168" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="Uoj-5Y-E2b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DEr-E1-16Q"/>
                             <constraint firstItem="O7v-mW-7bo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="LKM-rc-cYU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O7v-mW-7bo" secondAttribute="trailing" constant="20" id="U8j-IX-51V"/>
                             <constraint firstItem="O7v-mW-7bo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aWZ-Xb-m6P"/>
+                            <constraint firstItem="O7v-mW-7bo" firstAttribute="top" secondItem="Uoj-5Y-E2b" secondAttribute="bottom" constant="8" id="bgS-eb-swl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="someText" destination="Uoj-5Y-E2b" id="ZEb-qW-y2x"/>
                         <outlet property="someView" destination="O7v-mW-7bo" id="sec-nd-suy"/>
                     </connections>
                 </viewController>
